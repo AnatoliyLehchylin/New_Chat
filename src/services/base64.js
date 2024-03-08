@@ -1,6 +1,6 @@
 const uint8Array = new Uint8Array(newPost.photoFile.data);
 
-
+// Преобразование Uint8Array в строку Base64
 // Преобразование Uint8Array в строку Base64
 const base64String = btoa(String.fromCharCode.apply(null, uint8Array));
 console.log('base64Str', base64String)
