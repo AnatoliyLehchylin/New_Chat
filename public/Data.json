@@ -1,0 +1,172 @@
+{
+  "eng": {
+    "modSignUp": {
+      "startIcon": "Sign UP",
+      "name": "Registration",
+      "nameUser": "Name",
+      "password": "Password",
+      "title": "Enter your name and password",
+      "select": "SELECT AVATAR (MAX-SIZE: 2 MB)",
+      "error": "Fill in all the fields!",
+      "errorUser": "Username already exists!",
+      "errorAvatar": "File size exceeds the limit (2 MB). Please choose a smaller file.",
+      "errorFormat": "Invalid file format. Please choose a file with .jpg, .jpeg, or .png extension."
+    },
+    "modSignIn": {
+      "startIcon": "Sign IN",
+      "name": "Login",
+      "nameUser": "Name",
+      "password": "Password",
+      "title": "Enter your name and password",
+      "error": "Fill in all the fields!",
+      "errorUser": "Invalid Username or Password!"
+    },
+    "myAccount": {
+      "name": "My account",
+      "secondName": "Setting User"
+    },
+    "modEditUser": {
+      "name": "Edit",
+      "avatar": "Avatar",
+      "password": "Password",
+      "select": "SELECT AVATAR (MAX-SIZE: 2 MB)",
+      "delAvatar": "DELETE AVATAR",
+      "currentPas": "Current Password",
+      "newPas": "New Password",
+      "repeatPas": "Repeat New Password",
+      "errorOne": "Fill in all the fields!",
+      "errorTwo": "The new password and the repeated password do not match!",
+      "errorThird": "The current password is incorrect!",
+      "errorAvatar": "File size exceeds the limit (2 MB). Please choose a smaller file.",
+      "errorFormat": "Invalid file format. Please choose a file with .jpg, .jpeg, or .png extension.",
+      "isPas": "Password changed successfully!"
+    },
+    "modDeleteUser": {
+      "name": "Delete",
+      "title": "Do you really want to delete your account?",
+      "delPosts": "Also delete all posts"
+    },
+    "modLanguages": {
+      "name": "Languages",
+      "eng": "English",
+      "ua": "Ukrainian"
+    },
+    "modExit": {
+      "name": "Logout",
+      "title": "Are you sure you want to log out?"
+    },
+    "modEditPost": {
+      "name": "Setting Post",
+      "nameEdit": "Edit",
+      "title": "Add description",
+      "text": "Text",
+      "select": "SELECT PHOTO (MAX-SIZE: 5 MB)",
+      "errorPhoto": "File size exceeds the limit (5MB). Please choose a smaller file.",
+      "errorFormat": "Invalid file format. Please choose a file with .jpg, .jpeg, or .png extension."
+    },
+    "modDeletePost": {
+      "name": "Delete",
+      "title": "Are you sure you want to delete this post?"
+    },
+    "modPhotoPost": {
+      "name": "Add a photo",
+      "title": "Add description",
+      "text": "Text",
+      "select": "SELECT PHOTO (MAX-SIZE: 5 MB)",
+      "error": "Fill in at least one field!",
+      "errorPhoto": "File size exceeds the limit (5MB). Please choose a smaller file.",
+      "errorFormat": "Invalid file format. Please choose a file with .jpg, .jpeg, or .png extension."
+    },
+    "other": {
+      "newMessages": "New messages",
+      "noPosts": "NO POSTS",
+      "edit": "Edit:",
+      "emptyMessage": "Empty message!"
+    }
+  },
+  "ua": {
+    "modSignUp": {
+      "startIcon": "Реєстрація",
+      "name": "Реєстрація",
+      "nameUser": "Ім'я",
+      "password": "Пароль",
+      "title": "Введіть ваше ім'я та пароль",
+      "select": "ОБЕРІТЬ АВАТАР (MAX-SIZE: 2MB)",
+      "error": "Заповніть усі поля!",
+      "errorUser": "Користувач з таким ім'ям вже існує!",
+      "errorAvatar": "Розмір файлу перевищує обмеження (2 МБ). Виберіть файл меншого розміру.",
+      "errorFormat": "Невірний формат файлу. Виберіть файл із розширенням .jpg, .jpeg або .png"
+    },
+    "modSignIn": {
+      "startIcon": "Вхід",
+      "name": "Вхід",
+      "nameUser": "Ім'я",
+      "password": "Пароль",
+      "title": "Введіть ваше ім'я та пароль",
+      "error": "Заповніть усі поля!",
+      "errorUser": "Невірне ім'я або пароль!"
+    },
+    "myAccount": {
+      "name": "Мій акаунт",
+      "secondName": "Налаштування користувача"
+    },
+    "modEditUser": {
+      "name": "Редагування",
+      "avatar": "Аватар",
+      "password": "Пароль",
+      "select": "ОБЕРІТЬ АВАТАР (MAX-SIZE: 2 MB)",
+      "delAvatar": "ВИДАЛИТИ АВАТАР",
+      "currentPas": "Поточний Пароль",
+      "newPas": "Новий Пароль",
+      "repeatPas": "Повторіть Новий Пароль",
+      "errorOne": "Заповніть усі поля!",
+      "errorTwo": "Новий пароль і повторний пароль не збігаються!",
+      "errorThird": "Поточний пароль неправильний!",
+      "errorAvatar": "Розмір файлу перевищує обмеження (2 МБ). Виберіть файл меншого розміру.",
+      "errorFormat": "Невірний формат файлу. Виберіть файл із розширенням .jpg, .jpeg або .png",
+      "isPas": "Пароль успішно змінено!"
+    },
+    "modDeleteUser": {
+      "name": "Видалення",
+      "title": "Ви дійсно хочете видалити акаунт?",
+      "delPosts": "Видалити також всі пости"
+    },
+    "modLanguages": {
+      "name": "Мова",
+      "eng": "Англійська",
+      "ua": "Українська"
+    },
+    "modExit": {
+      "name": "Вихід з акаунта",
+      "title": "Ви дійсно хочете вийти з акаунта?"
+    },
+    "modEditPost": {
+      "name": "Редагування повідомлення",
+      "nameEdit": "Редагування",
+      "title": "Додати опис",
+      "text": "Текст",
+      "select": "ОБЕРІТЬ ФОТО (MAX-SIZE: 5 MB)",
+      "errorPhoto": "Розмір файлу перевищує обмеження (5 МБ). Виберіть файл меншого розміру.",
+      "errorFormat": "Невірний формат файлу. Виберіть файл із розширенням .jpg, .jpeg або .png"
+    },
+    "modDeletePost": {
+      "name": "Видалення",
+      "title": "Ви дійсно хочете видалити пост?"
+    },
+    "modPhotoPost": {
+      "name": "Додати фото",
+      "title": "Додати опис",
+      "text": "Текст",
+      "select": "ОБЕРІТЬ ФОТО (MAX-SIZE: 5 MB)",
+      "error": "Заповніть хоча б одне з полів!",
+      "errorPhoto": "Розмір файлу перевищує обмеження (5 МБ). Виберіть файл меншого розміру.",
+      "errorFormat": "Невірний формат файлу. Виберіть файл із розширенням .jpg, .jpeg або .png"
+    },
+    "other": {
+      "newMessages": "Нові повідомлення",
+      "noPosts": "НЕМАЄ ПОВІДОМЛЕНЬ",
+      "edit": "Відредаговано:",
+      "emptyMessage": "Пусте повідомлення!"
+    }
+  }
+}
