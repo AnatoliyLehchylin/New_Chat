@@ -1,8 +1,5 @@
-globalThis.users = 'users';
-globalThis.posts = 'posts';
-
-// globalThis.users = 'userNews';
-// globalThis.posts = 'postNews';
+globalThis.users = 'userNews';
+globalThis.posts = 'postNews';
 
 export const getUserById = async (id) => {
     try {

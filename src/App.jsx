@@ -182,14 +182,14 @@ function App() {
 
     useEffect(() => {
         if (user.name) {
-            socket.on('dataUpdated', addPostUpdated);
-            socket.on('dataDelete', deletePostUpdated);
-            socket.on('dataEdit', editPostUpdated);
+            socket.on(`dataUpdated${globalThis.posts}`, addPostUpdated);
+            socket.on(`dataDelete${globalThis.posts}`, deletePostUpdated);
+            socket.on(`dataEdit${globalThis.posts}`, editPostUpdated);
 
             return () => {
-                socket.off('dataUpdated', addPostUpdated);
-                socket.off('dataDelete', deletePostUpdated);
-                socket.on('dataEdit', editPostUpdated);
+                socket.off(`dataUpdated${globalThis.posts}`, addPostUpdated);
+                socket.off(`dataDelete${globalThis.posts}`, deletePostUpdated);
+                socket.on(`dataEdit${globalThis.posts}`, editPostUpdated);
                 socket.disconnect();
             };
         }
