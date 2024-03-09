@@ -17,25 +17,27 @@ function ModalLargePhoto({photo}) {
         setOpen(false);
     };
 
-    const handleSaveImage = (event, image) => {
-
-        event.preventDefault();
-
-        const downloadLink = document.createElement("a");
-
-        downloadLink.href = image;
-        downloadLink.download = "image.jpg";
-
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-
-        document.body.removeChild(downloadLink);
-    };
+    // Завантаження файла при натисканні правої кнопки миші чи довге натискання на сматфоні
+    // const handleSaveImage = (event, image) => {
+    //
+    //     event.preventDefault();
+    //
+    //     const downloadLink = document.createElement("a");
+    //
+    //     downloadLink.href = image;
+    //     downloadLink.download = "image.jpg";
+    //
+    //     document.body.appendChild(downloadLink);
+    //     downloadLink.click();
+    //
+    //     document.body.removeChild(downloadLink);
+    // };
 
     return (
         <div >
 
-            <img src={photo} style={{maxWidth: '250px', maxHeight: '200px'}} onClick={handleOpen} onContextMenu={(event) => handleSaveImage( event, photo)}/>
+            {/*<img src={photo} style={{maxWidth: '250px', maxHeight: '200px'}} onClick={handleOpen} onContextMenu={(event) => handleSaveImage( event, photo)}/>*/}
+            <img src={photo} style={{maxWidth: '250px', maxHeight: '200px'}} onClick={handleOpen} alt='Photo'/>
 
             <Dialog open={open} onClose={handleClose}>
                 <DialogContent sx={{display: 'flex', padding:'0px'}}>

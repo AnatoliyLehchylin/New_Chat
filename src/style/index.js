@@ -43,11 +43,13 @@ export const buttonWrap = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    borderTopRightRadius: '10px',
-    borderTopLeftRadius: '10px',
     backgroundColor: '#67676c',
-    paddingTop: '5px'
-}
+    paddingTop: '5px',
+    '@media screen and (min-width: 600px)': {
+        borderTopRightRadius: '10px',
+        borderTopLeftRadius: '10px',
+    },
+};
 
 export const avatarNameWrapp = {
     display: 'flex',
@@ -59,14 +61,16 @@ export const avatarNameWrapp = {
 export const containerChat = {
     display: 'flex',
     boxSizing: 'border-box',
-    borderBottomLeftRadius: '10px',
-    borderBottomRightRadius: '10px',
     flexDirection: 'column',
     pt: '10px',
     width: '100%',
-    height: 'calc(100% - 44.6px)',
+    height: 'calc(100% - 41px)',
     backgroundColor: 'black',
     '&.MuiContainer-root': {paddingLeft: '0px', paddingRight: '0px'},
+    '@media screen and (min-width: 600px)': {
+        borderBottomLeftRadius: '10px',
+        borderBottomRightRadius: '10px',
+    },
 };
 
 export const textField = {

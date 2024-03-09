@@ -28,7 +28,11 @@ export default function AccountMenu({user, language, setLanguage}) {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
-                sx={{color: 'black'}}
+                sx={{
+                    color: 'black', '&:focus': {
+                        outline: 'none'
+                    }
+                }}
             >
                 <MoreVertIcon/>
             </Button>

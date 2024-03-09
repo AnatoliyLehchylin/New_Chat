@@ -71,8 +71,11 @@ function App() {
     const userId = localStorage.getItem('userId');
     const lastTimePost = localStorage.getItem('lastTimePost' || null);
 
+    let newMessages;
     const lastIndex = posts?.findIndex(post => post.created_at === lastTimePost);
-    const newMessages = posts.length - lastIndex - 1;
+    if(lastIndex > 0) {
+        newMessages = posts.length - lastIndex - 1;
+    }
 
     const chatBoxRef = useRef(null);
 
@@ -102,6 +105,13 @@ function App() {
         } catch (err) {
             throw err;
         }
+    };
+
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            addNewPost();
+        }
+        return true;
     };
 
     const addPostUpdated = (newPost) => {
@@ -271,6 +281,7 @@ function App() {
                     onChange={changeNewPost}
                     autoFocus
                     disabled={!user.name}
+                    onKeyDown={handleKeyPress}
                 ></TextField>
 
                     <Box sx={footerContainer}>
@@ -280,7 +291,10 @@ function App() {
                         {user.name &&
                             <ModalPhotoPost addNewPost={addNewPost} photoFile={photoFile} setPhotoFile={setPhotoFile} addedPost={addedPost} setAddedPost={setAddedPost} language={language}/>
                         }
-                        <Button disabled={!user.name} sx={{width: '64px', marginRight: '20px'}} onClick={addNewPost} color="primary">SEND</Button>
+                            <Button disabled={!user.name} sx={{ width: '64px', margin: '0 20px 0 10px', '&:focus': {
+                                    outline: 'none'}, }} color="primary" type="submit" onClick={addNewPost}>
+                                SEND
+                            </Button>
                     </Box>
 
             </Container>

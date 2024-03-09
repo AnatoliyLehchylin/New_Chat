@@ -33,13 +33,13 @@ body {
   background-repeat: no-repeat;
   margin: 0;
   display: flex;
-  padding-right: 0;
-  padding-left: 0;
+  padding: 0;
+  /*padding-right: 0;*/
+  /*padding-left: 0;*/
   /*place-items: center;*/
   justify-content: center;
   align-items: flex-start;
   min-width: 320px;
-
   height: 100vh;
   scrollbar-width: none;
 }
@@ -72,8 +72,9 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
   }
   a:hover {
     color: #747bff;
