@@ -35,7 +35,7 @@ function ModalSignIn({language}) {
     const [isValidUser, setIsValidUser] = useState(true);
     const [errorMessage, setErrorMessage] = useState("");
 
-    const dataText = Data[language].modSignUp;
+    const dataText = Data[language].modSignIn;
 
     const handleOpen = () => {
         setOpen(true);

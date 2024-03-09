@@ -11,7 +11,7 @@ export const buttonEyeStyle = {
 export const icon = {
     color: 'black',
     cursor: 'pointer',
-    padding: '10px 0 0 50px'
+    padding: '6.4px 0 0 50px'
 };
 
 export const image = {
