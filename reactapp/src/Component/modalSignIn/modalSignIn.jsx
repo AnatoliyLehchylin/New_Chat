@@ -19,7 +19,7 @@ import {
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-import {buttonEyeStyle, icon, iconCheck, iconClear} from './style';
+import {buttonEyeStyle, icon, iconCheck, iconClear} from './style/index.js';
 import Data from '../../../public/Data.json';
 import ClearIcon from "@mui/icons-material/Clear.js";
 import CheckIcon from "@mui/icons-material/Check.js";

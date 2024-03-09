@@ -23,7 +23,7 @@ import {
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-import {buttonEyeStyle, icon, image, iconClear, iconCheck} from './style';
+import {buttonEyeStyle, icon, image, iconClear, iconCheck} from './style/index.js';
 import Data from '../../../public/Data.json';
 
 
