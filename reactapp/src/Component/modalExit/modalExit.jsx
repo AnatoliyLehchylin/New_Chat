@@ -36,7 +36,7 @@ function ModalExit({setOpenAccount, language}) {
         setOpen(false);
         setOpenAccount(null);
         dispatch(reset());
-        localStorage.removeItem('userId');
+        localStorage.removeItem(`userId${globalThis.chat}`);
     };
 
     return (

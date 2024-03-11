@@ -9,7 +9,7 @@ const fetchDataUser = async (userId, dispatch, setLoading) => {
             setLoading(false);
 
             if (!data.ok) {
-                localStorage.removeItem('userId');
+                localStorage.removeItem(`userId${globalThis.chat}`);
             } else {
                 const currentUser = await data.json();
                 dispatch(addUser(currentUser.data));

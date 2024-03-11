@@ -68,13 +68,18 @@ function App() {
     const socket = io(import.meta.env.VITE_REACT_APP_API_URL);
     const dispatch = useDispatch();
     const user = useSelector(state => state.user);
-    const userId = localStorage.getItem('userId');
-    const lastTimePost = localStorage.getItem('lastTimePost' || null);
+    const userId = localStorage.getItem(`userId${globalThis.chat}`);
+    const lastTimePost = localStorage.getItem(`lastTimePost${user.id}` || null);
 
     let newMessages;
     const lastIndex = posts?.findIndex(post => post.created_at === lastTimePost);
+
     if(lastIndex > 0) {
         newMessages = posts.length - lastIndex - 1;
+    }
+
+    if(lastIndex < 0 && lastTimePost === null) {
+        newMessages = posts.length;
     }
 
     const chatBoxRef = useRef(null);
@@ -109,6 +114,7 @@ function App() {
 
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
+            event.preventDefault();
             addNewPost();
         }
         return true;
@@ -119,17 +125,17 @@ function App() {
             setIsValidNewPost(false);
             setErrorMessage("Invalid added Post!");
         } else {
-            setLoading(false);
             setPosts((prevPosts) => {
                 const postArray = [];
                 postArray.push(newPost);
                 const postWithFormattedDate = FormatPostDates(postArray);
-                localStorage.setItem('lastTimePost', postWithFormattedDate[postWithFormattedDate.length - 1].created_at);
+                localStorage.setItem(`lastTimePost${user.id}`, postWithFormattedDate[postWithFormattedDate.length - 1].created_at);
                 return [...prevPosts, postWithFormattedDate[0]];
             });
             setAddedPost('');
             setPhotoFile(null)
         }
+        setLoading(false);
     };
 
     const deletePostUpdated = (deletePost) => {
@@ -137,15 +143,16 @@ function App() {
             setIsValidNewPost(false);
             setErrorMessage("Invalid delete Post!");
         } else {
-            setLoading(false);
             setPosts((prevPosts) => prevPosts.filter(post => post._id !== deletePost._id));
         }
+        setLoading(false);
     };
 
     const editPostUpdated = (editPost) => {
         if (!editPost) {
             setIsValidNewPost(false);
             setErrorMessage("Invalid edit Post!");
+            setLoading(false);
         } else {
             setLoading(false);
             setPosts((prevPosts) => {
@@ -176,7 +183,7 @@ function App() {
     useEffect(() => {
         chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
         if(posts.length > 0) {
-            localStorage.setItem('lastTimePost', posts[posts.length - 1].created_at);
+            localStorage.setItem(`lastTimePost${user.id}`, posts[posts.length - 1].created_at);
         }
     }, [posts]);
 

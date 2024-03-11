@@ -44,12 +44,14 @@ function ModalDeleteUser({setOpenSetting, setOpenAccount, user, language}) {
     const deleteCurrentUser = async () => {
         try {
             const data = await deleteUser(user.id);
-            dispatch(reset());
-            localStorage.removeItem('userId');
 
             if(checked) {
                 const data = await deleteAllPost(user.id);
             }
+
+            localStorage.removeItem(`userId${globalThis.chat}`);
+            localStorage.removeItem(`lastTimePost${user.id}`);
+            dispatch(reset());
             setOpen(false);
             setOpenAccount(null);
             setOpenSetting(false);

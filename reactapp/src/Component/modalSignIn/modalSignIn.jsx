@@ -86,7 +86,7 @@ function ModalSignIn({language}) {
                 setIsValidUser(true);
                 setErrorMessage("");
                 dispatch(addUser(currentUser.data));
-                localStorage.setItem('userId', currentUser.data._id);
+                localStorage.setItem(`userId${globalThis.chat}`, currentUser.data._id);
             }
 
         } catch (err) {

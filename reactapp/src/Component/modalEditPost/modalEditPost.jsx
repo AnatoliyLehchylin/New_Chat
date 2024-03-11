@@ -75,14 +75,14 @@ function ModalEditPost({setOpenSetting, postId, text, photoFile, setLoading, lan
                 return;
             }
 
-            const maxSize = 6 * 1024 * 1024; // 5MB
-            if (file.size > maxSize) {
-                event.target.value = null;
-                setEditPhotoFile(null);
-                setIsValidUser(false);
-                setErrorMessage(`${dataText.errorPhoto}`);
-                return;
-            }
+            // const maxSize = 6 * 1024 * 1024; // 5MB
+            // if (file.size > maxSize) {
+            //     event.target.value = null;
+            //     setEditPhotoFile(null);
+            //     setIsValidUser(false);
+            //     setErrorMessage(`${dataText.errorPhoto}`);
+            //     return;
+            // }
             setIsValidUser(true);
             setErrorMessage("");
             const convertFile = await convertImageToBase64(file);

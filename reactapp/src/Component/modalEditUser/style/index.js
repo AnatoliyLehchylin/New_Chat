@@ -16,7 +16,8 @@ export const icon = {
 
 export const boxAvatar = {
     display: 'flex',
-    justifyContent: 'space-around',
+    // justifyContent: 'space-around',
+    marginLeft: '20px',
     alignItems: 'center',
     marginTop: '8px'
 };
@@ -26,13 +27,14 @@ export const img = {
     height: '50px',
     objectPosition: 'top',
     objectFit: 'cover',
-    borderRadius: '50%'
+    borderRadius: '50%',
+    marginRight: '20px'
 };
 
 export const buttonDelAvatar = {
     fontSize: '8px',
-    width: '110px',
-    marginLeft: '73px'
+    // width: '110px',
+    marginLeft: '90px'
 };
 
 export const boxPassword = {

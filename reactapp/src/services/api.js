@@ -1,5 +1,6 @@
 globalThis.users = 'userNews';
 globalThis.posts = 'postNews';
+globalThis.chat = 'NewChat';
 
 export const getUserById = async (id) => {
     try {
